@@ -1,0 +1,38 @@
+{
+  "name": "genpark-autonomous-background-terminal-test-evaluator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Background terminal agent running parallel test suites, capturing compilation tracebacks, and iterating fixes.",
+  "author": "genpark",
+  "category": "developer-terminal",
+  "tags": [
+    "terminal-agent",
+    "background-evaluator",
+    "test-runner",
+    "automated-debugging",
+    "ci-cd"
+  ],
+  "inputs": {
+    "test_command": {
+      "type": "string"
+    },
+    "working_directory": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "terminal_session_id": {
+      "type": "string"
+    },
+    "tests_passed_count": {
+      "type": "integer"
+    },
+    "coverage_percentage": {
+      "type": "number"
+    },
+    "autonomous_fix_iteration_succeeded": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
